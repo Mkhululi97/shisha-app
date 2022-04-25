@@ -10,11 +10,18 @@ body {
   background-color: rgb(234, 255, 246);
 }
 
-.container {
+.hero-container,
+.navbar,
+.container-cards {
   width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
   margin-left: auto;
   margin-right: auto;
 }
+
 /* navigation */
 
 .navbar {
@@ -51,17 +58,17 @@ a:link {
 }
 
 /* HEREO SECTION */
+
 .hero-container {
   display: flex;
   align-items: flex-start;
   padding: 0 30px;
+  margin-bottom: 140px;
 }
 
 .hero-image {
-  /* width: 100%; */
   height: 500px;
   margin-right: 50px;
-  /* flex: 1; */
 }
 .hero-main-text {
   font-size: 40px;
@@ -90,17 +97,17 @@ a:link {
 }
 
 /* reviews section */
+
 .reviews {
   background-color: rgb(26, 156, 214);
   position: relative;
-  padding: 20px 50px 80px 50px;
-  margin-top: 50px;
+  padding: 70px 50px 92px 50px;
 }
 .reivews-image {
   z-index: 1;
   position: absolute;
-  top: 150px;
-  left: 150px;
+  top: 190px;
+  left: 300px;
 }
 .card {
   padding: 30px 40px;
@@ -137,10 +144,11 @@ a:link {
 }
 
 /* FOOTRER */
+
 .footer {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
+  align-items: center;
 }
 
 .footer-text {
@@ -151,21 +159,15 @@ a:link {
   margin-bottom: 17px;
 }
 .footer-btn {
-  padding: 22px 15px;
-  font-size: 36px;
-  font-weight: 400;
+  padding: 18px 29px;
+  font-size: 24px;
+  font-weight: 500;
   border: none;
-  border-radius: 11px;
+  border-radius: 5.4px;
   color: white;
   background-color: rgb(26, 156, 214);
   text-transform: uppercase;
 }
 .footer-image-right {
   transform: rotate(180deg);
-}
-
-.footer-image-left,
-.footer-container,
-.footer-image-right {
-  flex: 1;
 }
