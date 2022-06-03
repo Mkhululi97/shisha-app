@@ -4,55 +4,69 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favicon.png" />
     <link rel="stylesheet" href="styles-update.css" />
     <title>The ShishaApp</title>
   </head>
   <body>
     <!-- NAVIGATION -->
-    <div class="container">
-      <nav class="navbar">
-        <div class="logo">
-          <img class="logo-img" src="images/logo.png" alt="hubbly-logo" />
-          <h3 class="logo-name">ShishaApp</h3>
-        </div>
+    <header class="header">
+      <img class="logo-image" src="/images/logo.png" alt="logo hubbly" />
+      <a>
+        <h3 class="logo-name">ShishaApp</h3>
+      </a>
 
-        <ul class="links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Reviews</a></li>
-          <li><a href="#">Go to app</a></li>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#home">Home</a></li>
+          <li><a class="main-nav-link" href="#reviews">Reviews</a></li>
+          <li><a class="main-nav-link" href="#cta">Go to App</a></li>
         </ul>
       </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <main>
       <!-- HERO SECTION -->
-      <section class="hero-container">
-        <img class="hero-image" src="/images/product.png" alt="" />
+      <section>
+        <div class="hero">
+          <div class="hero-text-box">
+            <h1 class="heading-primary">
+              Buying your well trusted brand of shisha flavour has just got
+              better. You can now buy your flavor at the comfort of your
+              place,<span class="hero-section-span">using the shisha app</span>
+            </h1>
+            <p class="hero-sub-text">
+              With the shisha app, you can buy all your shisha material, foil
+              coal and flavor, without leaving your place.The material will be
+              delivered striaght to your place.
+            </p>
+            <a href="#cta" class="heros-btn">Go to app</a>
+          </div>
 
-        <div class="hero-text">
-          <p class="hero-main-text">
-            Buying your well trusted brand of shisha flavour has just got
-            better. You can now buy your favorite flavor at the comfort of your
-            place,
-            <span class="hero-section-span">using the shisha app</span>
-          </p>
-
-          <p class="hero-sub-text">
-            With the shisha app, you can buy all your shisha material, foil coal
-            and flavor, without leaving your place. The material will be
-            delivered striaght to your place.
-          </p>
-
-          <button class="heros-btn">Go to app</button>
+          <div class="hero">
+            <div class="hero-image-box">
+              <img class="hero-image" src="/images/product.png" alt="" />
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- REVIEWS-->
       <section class="reviews">
-        <img class="reivews-image" src="/images/Polygon 3.png" alt="" />
+        <div class="reviews-image-container">
+          <img class="reviews-image" src="/images/Polygon 3.png" alt="" />
+        </div>
 
-        <h4 class="reviews-heading">What others say</h4>
+        <h3 class="reviews-heading">What others say</h3>
         <div class="container-cards">
           <div class="card card-1">
             <span class="name-1 name">Mphoza</span>
-            <p>
+            <p class="reviews-main-text">
               Awe jita, its Mphoza, if you’ll always have Mint Cream flavor, you
               and I will be friends, really enjoyed that flavour jita. You keep
               selling that flavor, I’ll keep supporting you.
@@ -61,7 +75,7 @@
 
           <div class="card card-2">
             <span class="name-2 name">Mpho</span>
-            <p>
+            <p class="reviews-main-text">
               Hey please let me know when you will have Cotton Candy I really
               enjoyed it, was very different from the usual mint that I’m use
               to.
@@ -69,7 +83,7 @@
           </div>
           <div class="card card-3">
             <span class="name-3 name">Lesedi</span>
-            <p>
+            <p class="reviews-main-text">
               Awe its Lesedi, I wanted to ask if you always have amaren
               flavours. Ruby Rush and Cotton Candy treated me well.
             </p>
@@ -79,17 +93,29 @@
       <!-- FOOTER -->
       <section class="footer">
         <div class="footer-image-left">
-          <img src="/images/Ellipse 15.png" alt="" />
+          <img class="footer-image" src="/images/Ellipse 15.png" alt="" />
         </div>
         <div class="footer-container">
-          <h4 class="footer-text">Ready to start smoking?</h4>
-          <button class="footer-btn">Yea lets go</button>
+          <h4 class="footer-text"></h4>
+          <div class="cta-footer-btn">
+            <a href="#cta" class="footers-btn">Go to app</a>
+          </div>
         </div>
         <div class="footer-image-right">
-          <img src="/images/Ellipse 15.png" alt="" />
+          <img class="footer-image" src="/images/Ellipse 15.png" alt="" />
         </div>
       </section>
-    </div>
+    </main>
+
+    <!-- SCRIPT FOR ION ICONS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>

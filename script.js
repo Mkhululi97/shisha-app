@@ -1,10 +1,8 @@
-const btn = document.getElementById("menu-btn");
-nav = document.getElementById("menu");
-
-function navToggle() {
-  btn.classList.toggle("open");
-  nav.classList.toggle("hidden");
-  document.body.classList.toggle("no-scroll");
-}
-
-btn.addEventListener("click", navToggle);
+const btnMobileNav = document.querySelector(".btn-mobile-nav");
+const header = document.querySelector(".header");
+btnMobileNav.addEventListener("click", function (e) {
+  e.preventDefault();
+  // console.log(btnMobileNav);
+  // console.log(header);
+  header.classList.toggle("nav-open");
+});
