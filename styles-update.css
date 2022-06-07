@@ -26,21 +26,20 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+  background-color: rgb(234, 255, 246);
 
   /* Only works if there is nothing absolutely positioned in relation to body */
   overflow-x: hidden;
 }
 
-.hero-container,
-.navbar,
-.container-cards {
+/* NAVIGATION */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9.6rem;
+  padding: 0 1.6rem;
 }
-
-.container {
-}
-
-/* navigation */
-
 .logo-name {
   font-size: 2.1rem;
   font-weight: 500;
@@ -50,18 +49,11 @@ body {
   height: 4.8rem;
   width: 4.8rem;
 }
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1.6rem;
-  height: 9.6rem;
-}
 .main-nav {
   display: flex;
   padding-top: 8rem;
   padding-left: 9.6rem;
-  background-color: rgba(255, 255, 255, 0.97);
+  background-color: rgb(234, 255, 246, 0.97);
   position: absolute;
   top: 0;
   left: 0;
@@ -103,7 +95,6 @@ body {
   display: block;
   color: #000;
   font-size: 1.6rem;
-  font-weight: 00;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -116,12 +107,23 @@ body {
   height: 2.4rem;
   width: 2.4rem;
 }
+/* STICKY NAVIGATION */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgb(234, 255, 246, 0.95);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+.sticky .hero {
+  margin-top: 9.6rem;
+}
 /* HEREO SECTION */
-.hero {
-}
-.container {
-}
-
 .hero-text-box {
   padding: 0 3.2rem;
 }
@@ -144,10 +146,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-.hero-main-text {
-}
-.hero-section-span {
-}
 .heros-btn {
   display: inline-block;
   text-decoration: none;
@@ -155,7 +153,7 @@ body {
   font-weight: 400;
   color: #fff;
   background-color: rgb(26, 156, 214);
-  padding: 1.2rem 2.4rem;
+  padding: 1.5rem 2.4rem;
   border-radius: 7px;
   margin-bottom: 4rem;
 }
@@ -166,15 +164,15 @@ body {
 }
 
 /* reviews section */
-
 .reviews {
-}
-.reviews-image-container {
+  padding: 3rem 0;
+  background-color: rgb(26, 156, 214);
 }
 .reviews-image {
   display: none;
 }
 .reviews-heading {
+  color: #fff;
   font-size: 2.4rem;
   font-weight: 400;
   text-align: center;
@@ -187,36 +185,32 @@ body {
   padding: 0 3.2rem;
   margin-bottom: 2.6rem;
 }
-.card:last-child {
-  margin-bottom: 3.6rem;
-}
 .reviews-main-text {
+  color: #fff;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.2px;
 }
 .name {
+  color: #fff;
   font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 1.2rem;
 }
 /* FOOTRER */
-
-.footer {
+.section-footer {
+  margin-top: 6.4rem;
+  padding: 0 3.2rem;
 }
-
 .footer-text {
-  font-size: 36px;
+  color: rgb(26, 156, 214);
+  margin-bottom: 1.2rem;
+  font-size: 2.1rem;
   font-weight: 500;
   line-height: 1.3;
 }
-.footer-btn {
-  font-size: 24px;
-  font-weight: 500;
-}
-.footer-image-right {
-}
+
 .footer-image {
   display: none;
   width: 100%;
@@ -227,10 +221,269 @@ body {
   padding-bottom: 2.6rem;
 }
 .footers-btn {
+  display: inline-block;
   background-color: rgb(26, 156, 214);
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   text-decoration: none;
   border-radius: 7px;
-  padding: 1.2rem 2.4rem;
+  padding: 1.5rem 2.4rem;
+  margin-bottom: 2rem;
+}
+/* TABLET SCREENS 768PX  */
+@media (min-width: 48em) {
+  .main-nav {
+    padding-left: 3.2rem;
+  }
+
+  .logo-name {
+    font-size: 2.4rem;
+  }
+  .heading-primary {
+    font-size: 2.8rem;
+  }
+  .icon-mobile-nav {
+    height: 2.8rem;
+    width: 2.8rem;
+  }
+  .hero-image {
+    width: 85%;
+  }
+  /* reviews */
+  .reviews-heading {
+    font-size: 2.8rem;
+  }
+  .reviews-main-text,
+  .name,
+  .hero-sub-text,
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 1.8rem;
+  }
+  .card:first-child {
+    padding-right: 0;
+  }
+  .heros-btn,
+  .footers-btn {
+    font-size: 2rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .section-footer {
+    margin-top: 3.2rem;
+  }
+  .footer-text {
+    font-size: 2.6rem;
+  }
+}
+
+/* LAPTOPS 1024PX */
+@media (min-width: 64em) {
+  .container {
+    max-width: 120rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* HEADER */
+  .header {
+    gap: 4.3rem;
+  }
+  .btn-mobile-nav {
+    display: none;
+  }
+  .main-nav {
+    align-items: center;
+    width: auto;
+    position: static;
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    height: 0;
+    padding-top: 0;
+    padding-left: 0;
+    margin-left: auto;
+  }
+  .main-nav-list {
+    display: flex;
+    gap: 3rem;
+  }
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    text-transform: none;
+    font-weight: 500;
+  }
+  /* HERO */
+  .hero {
+    grid-template-columns: 1.7fr 1fr;
+    padding: 4.8rem 0 6.4rem 0;
+  }
+  .heading-primary {
+    font-size: 4rem;
+    line-height: 1.2;
+    letter-spacing: -0.3px;
+  }
+  .hero-sub-text {
+    font-size: 2rem;
+    line-height: 1.4;
+    letter-spacing: 0px;
+  }
+  .hero-image {
+    width: 100%;
+  }
+  .heros-btn {
+    font-size: 2.3rem;
+  }
+  .reviews {
+    position: relative;
+    background-color: rgb(26, 156, 214);
+
+    padding: 4.8rem 3.2rem 9.6rem 3.2rem;
+    color: #fff;
+  }
+  .reviews-image {
+    width: 82%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -52%);
+  }
+  .container-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3.2rem;
+  }
+  .card {
+    display: block;
+    z-index: 777;
+    background-color: rgb(234, 255, 246);
+    padding: 6rem 3rem;
+  }
+  .card:first-child {
+    margin-left: 0;
+    padding-right: 3rem;
+  }
+
+  .name {
+    display: inline-block;
+    color: #000;
+    margin-bottom: 1.6rem;
+  }
+  .reviews-main-text {
+    color: black;
+  }
+  /* FOOTER */
+  .section-footer {
+    margin-top: 0;
+    padding: 0;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(234, 255, 246);
+  }
+  .footer-image-right {
+    transform: rotate(180deg);
+    margin-bottom: 9.6rem;
+  }
+  .footer-image-left {
+    margin-top: 9.6rem;
+  }
+  .footer-image {
+    width: 75%;
+    display: block;
+  }
+  .footer-text {
+    font-size: 3rem;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin-bottom: 2.4rem;
+  }
+  .footers-btn {
+    display: inline-block;
+  }
+}
+/* LARGER LAPTOPS */
+@media (min-width: 90em) {
+  .header {
+    padding: 0 4.8rem;
+  }
+
+  .reviews-image {
+    width: 47%;
+  }
+  .container-cards {
+    gap: 3.2rem;
+  }
+  .main-nav-link:hover,
+  .main-nav-link:active {
+    color: rgb(26, 156, 214);
+  }
+}
+/* ULTRA WIDE DISPLAYS */
+@media (min-width: 160em) {
+  .container {
+    max-width: 160rem;
+    margin: 0 auto;
+  }
+  .header {
+    padding: 0 40rem;
+  }
+  .logo-name {
+    font-size: 3.6rem;
+  }
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 2.8rem;
+  }
+  /* HERO */
+  .heading-primary {
+    font-size: 5rem;
+  }
+  .hero-sub-text {
+    font-size: 3rem;
+  }
+  .heros-btn {
+    font-size: 4rem;
+    padding: 2.5rem 3.4rem;
+  }
+  /* REVIEWS */
+  .reviews {
+    padding: 15rem 3.2rem 18rem 9.6rem;
+  }
+  .reviews-heading {
+    font-size: 4.7rem;
+    margin-bottom: 5.6rem;
+  }
+  .reviews-image {
+    width: 50.5%;
+    transform: translate(-50%, -44%);
+  }
+  .card {
+    padding: 13.1rem 5.7rem;
+  }
+  .card:first-child {
+    padding-right: 5.7rem;
+  }
+  .container-cards {
+    gap: 6.4rem;
+  }
+  .reviews-main-text,
+  .name {
+    font-size: 3rem;
+  }
+  /* FOOTER */
+  .footers-btn {
+    font-size: 4rem;
+    padding: 2.5rem 3.4rem;
+  }
+  .footer-text {
+    font-size: 5rem;
+  }
+  .footer-image {
+    width: 100%;
+  }
 }
